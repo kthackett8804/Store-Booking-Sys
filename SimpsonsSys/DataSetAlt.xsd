@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetAlt" targetNamespace="http://tempuri.org/DataSetAlt.xsd" xmlns:mstns="http://tempuri.org/DataSetAlt.xsd" xmlns="http://tempuri.org/DataSetAlt.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbSimpsonsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbSimpsonsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SimpsonsSys.Properties.Settings.GlobalReference.Default.dbSimpsonsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbSimpsonsConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Alteration.AlterationId, Alteration.ClientID, Alteration.StaffID, Alteration.Reason, Alteration.Cost, Alteration.DateComp, Alteration.ifPaid, Client.CFname, Client.CSurname, Staff.SFname, Staff.SSurname, Staff.IsAdmin
+FROM            Alteration INNER JOIN
+                         Client ON Alteration.ClientID = Client.CID INNER JOIN
+                         Staff ON Alteration.StaffID = Staff.SID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AlterationId" DataSetColumn="AlterationId" />
+              <Mapping SourceColumn="ClientID" DataSetColumn="ClientID" />
+              <Mapping SourceColumn="StaffID" DataSetColumn="StaffID" />
+              <Mapping SourceColumn="Reason" DataSetColumn="Reason" />
+              <Mapping SourceColumn="Cost" DataSetColumn="Cost" />
+              <Mapping SourceColumn="DateComp" DataSetColumn="DateComp" />
+              <Mapping SourceColumn="ifPaid" DataSetColumn="ifPaid" />
+              <Mapping SourceColumn="CFname" DataSetColumn="CFname" />
+              <Mapping SourceColumn="CSurname" DataSetColumn="CSurname" />
+              <Mapping SourceColumn="SFname" DataSetColumn="SFname" />
+              <Mapping SourceColumn="SSurname" DataSetColumn="SSurname" />
+              <Mapping SourceColumn="IsAdmin" DataSetColumn="IsAdmin" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="dbSimpsonsConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Alteration.AlterationId, Alteration.ClientID, Alteration.StaffID, Alteration.Reason, Alteration.Cost, Alteration.DateComp, Alteration.ifPaid, Client.CFname, Client.CSurname, Staff.SFname, Staff.SSurname, Staff.IsAdmin
+FROM            Alteration INNER JOIN
+                         Client ON Alteration.ClientID = Client.CID INNER JOIN
+                         Staff ON Alteration.StaffID = Staff.SID
+WHERE        (Alteration.ClientID = @ClientID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ClientID" ColumnName="ClientID" DataSourceName="[C:\USERS\DEVUSER\DOWNLOADS\SIMPSONSCOURSEWORK\SIMPSONSSYS\SIMPSONSSYS\DBSIMPSONS.MDF].dbo.Alteration" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ClientID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ClientID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetAlt" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetAlt" msprop:Generator_UserDSName="DataSetAlt">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AlterationId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAlterationId" msprop:Generator_ColumnPropNameInRow="AlterationId" msprop:Generator_ColumnPropNameInTable="AlterationIdColumn" msprop:Generator_UserColumnName="AlterationId" type="xs:int" />
+              <xs:element name="ClientID" msprop:Generator_ColumnVarNameInTable="columnClientID" msprop:Generator_ColumnPropNameInRow="ClientID" msprop:Generator_ColumnPropNameInTable="ClientIDColumn" msprop:Generator_UserColumnName="ClientID" type="xs:int" />
+              <xs:element name="StaffID" msprop:Generator_ColumnVarNameInTable="columnStaffID" msprop:Generator_ColumnPropNameInRow="StaffID" msprop:Generator_ColumnPropNameInTable="StaffIDColumn" msprop:Generator_UserColumnName="StaffID" type="xs:int" />
+              <xs:element name="Reason" msprop:Generator_ColumnVarNameInTable="columnReason" msprop:Generator_ColumnPropNameInRow="Reason" msprop:Generator_ColumnPropNameInTable="ReasonColumn" msprop:Generator_UserColumnName="Reason" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DateComp" msprop:Generator_ColumnVarNameInTable="columnDateComp" msprop:Generator_ColumnPropNameInRow="DateComp" msprop:Generator_ColumnPropNameInTable="DateCompColumn" msprop:Generator_UserColumnName="DateComp" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ifPaid" msprop:Generator_ColumnVarNameInTable="columnifPaid" msprop:Generator_ColumnPropNameInRow="ifPaid" msprop:Generator_ColumnPropNameInTable="ifPaidColumn" msprop:Generator_UserColumnName="ifPaid" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CFname" msprop:Generator_ColumnVarNameInTable="columnCFname" msprop:Generator_ColumnPropNameInRow="CFname" msprop:Generator_ColumnPropNameInTable="CFnameColumn" msprop:Generator_UserColumnName="CFname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CSurname" msprop:Generator_ColumnVarNameInTable="columnCSurname" msprop:Generator_ColumnPropNameInRow="CSurname" msprop:Generator_ColumnPropNameInTable="CSurnameColumn" msprop:Generator_UserColumnName="CSurname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SFname" msprop:Generator_ColumnVarNameInTable="columnSFname" msprop:Generator_ColumnPropNameInRow="SFname" msprop:Generator_ColumnPropNameInTable="SFnameColumn" msprop:Generator_UserColumnName="SFname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SSurname" msprop:Generator_ColumnVarNameInTable="columnSSurname" msprop:Generator_ColumnPropNameInRow="SSurname" msprop:Generator_ColumnPropNameInTable="SSurnameColumn" msprop:Generator_UserColumnName="SSurname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsAdmin" msprop:Generator_ColumnVarNameInTable="columnIsAdmin" msprop:Generator_ColumnPropNameInRow="IsAdmin" msprop:Generator_ColumnPropNameInTable="IsAdminColumn" msprop:Generator_UserColumnName="IsAdmin" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:AlterationId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
